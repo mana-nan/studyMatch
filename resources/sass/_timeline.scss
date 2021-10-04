@@ -1,0 +1,106 @@
+$main-color: #02af97;
+
+#form2{
+position:relative;
+max-width:300px;	
+margin-bottom:80px;
+
+}
+#sbox2{
+height:40px;
+padding:0 10px; 
+position:absolute; 
+left:0;
+top:0; 
+border-radius:2px;
+outline:0;
+background:#eee;
+
+}
+#sbtn2{
+height:40px;
+position:absolute; 
+left:255px;/*アイコン左右の位置調整*/
+top:0;
+background:none;
+color:#666;
+border:none;
+font-size:20px;/*アイコンサイズ*/
+}
+#sbtn2:hover{
+color: $main-color;
+}
+
+/*.text-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.article {
+  background-color: #eee;
+  
+}
+
+ .contents{
+padding: 50px 50px;
+}
+*/
+
+.text-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.card-contents {
+    background-color: #eee;
+    position: relative;
+    padding: 40px;
+    display: block;
+    margin-bottom: 40px;
+    z-index: 1;  
+  }
+  
+  .card-contents a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-indent:-999px;
+    z-index: 2;
+  }
+  
+  .rounded-circle a.inlink {
+    position: relative; 
+    z-index: 3;
+  }
+  
+  .card-contents:hover {
+    filter:alpha(opacity=70);/* IE 6,7*/
+    -ms-filter: "alpha(opacity=70)";/* IE 8,9 */
+    -moz-opacity:0.7;/* FF , Netscape */
+    -khtml-opacity: 0.7;/* Safari 1.x */
+    opacity:0.7;
+    zoom:1;/*IE*/
+  }
+
+
+.rounded-circle {
+    position: relative;
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    background: $main-color;
+    display: flex;
+    cursor: pointer;
+    
+    }
+    
+h2 {
+  margin-top: 20px;
+}
+    

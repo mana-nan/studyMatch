@@ -13,14 +13,38 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//左 に〜〜メソッドでアクセスしたら、右のcontrollerの@アクションに割り当てる
+Route::group (['prefix' => 'mypage', 'middleware' => 'auth'], function() {
+    Route::get ('create', 'MypageController@add');
+    Route::post('create', 'MypageController@create');
+    Route::get ('index','MypageController@index');
+    Route::get('edit','MypageController@edit');
+    Route::post('edit','MypageController@update');
 });
 
+Route::group (['prefix' => 'article', 'middleware' => 'auth'], function() {
+    //投稿画面アクセス時
+    Route::get ('create', 'ArticleController@add');
+    //投稿フォーム送信時
+    Route::post('create', 'ArticleController@create');
+    //投稿詳細画面
+    Route::get('index/{id}', 'ArticleController@index');
+    Route::get('edit/{id}', 'ArticleController@edit');
+    Route::post('edit', 'ArticleController@update');
+    Route::get('delete', 'ArticleController@delete');
+});
+
+Route::get('timeline/index','TimelineController@index');
+
+
+
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/top', function () {
+    return view('top'); 
+}) -> name('top');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function() {
+    return view('home');
+}) -> name('home');

@@ -15,8 +15,8 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password','self_introduction','sex','image_name','university','faculty'
+    protected $guarded = [
+        'id'
     ];
 
     /**
@@ -36,4 +36,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+    
+    //投稿した記事を取得
+    public function article() {
+        return $this->hasMany('App\Article');
+    }
+    
+    //マイページ取得
+    public function mypage() {
+        return $this->hasOne('App\Mypage');
+    }
+    
+    
+    
 }

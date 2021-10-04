@@ -96,7 +96,9 @@ return [
     'password' => 'The password is incorrect.',
     'present' => 'The :attribute field must be present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'The :attribute field is required.',
+    
+    'required' => ':attribute に入力が必要です。',
+
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
@@ -150,7 +152,23 @@ return [
         'name'=>'名前',
         'email'=>'メールアドレス',
         'password'=>'パスワード',
-        'self_introduction'=>'自己紹介',
+        'userName'=>'ユーザー名',
+        'userImage'=>'画像',
+        'university'=>'大学',
+        'faculty'=>'学部',
+        'introduction'=>'自己紹介',
+        "Name"=> "お名前",
+        "E-Mail Address"=>"メールアドレス",
+        "Password"=> "パスワード",
+        "Confirm Password"=>"パスワード(確認用)",
+        "Remember Me" => "ログイン状態を保存",
+        
+        "Login" => "ログイン",
+        "Register" => "新規登録",
+        "Logout" => "ログアウト",
+        "Forgot Your Password?" => "パスワードを忘れた場合",
+        "Reset Password" => "パスワード再設定",
+        "Send Password Reset Link" => "パスワード再設定URLを送信",
     ],
 
 ];
